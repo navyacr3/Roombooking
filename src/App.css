@@ -1,38 +1,53 @@
-.App {
+*{
+  margin: 0;
+  padding: 0;
+}
+
+.roombooking{
+  max-width: 500px;
+  margin: auto;
+  margin-top:100px;
+  color:rgb(13, 13, 153);
+}
+
+button{
+  background-color:none; /* Green */
+  border: none;
+  padding: 5px 8px;
   text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 25px;
+  border-radius: 5px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+button:hover {
+  background-color: #aeb9af; /* Green */
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.booking{
+  border: 1px solid rgb(145, 141, 141);
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  margin: auto;
+  padding: 20px;
+  gap:4px;
+  color:rgb(16, 16, 80);
+}
+.rooms,.adults,.children{
+  padding: 20px;
+  margin:10px;
+  display: flex;
+  border: 1px solid rgb(145, 141, 141);
+  border-radius: 5px;
+  justify-content: space-between
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.room,.adult,.child{
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
 }
