@@ -9,17 +9,16 @@ function Roombooking() {
   const [adult, setadult] = useState(0);
   const [child, setchild] = useState(0);
   
-  function roomplus() {
+  const roomplus = () => {
     if (rooms <= 4) {
       setrooms(rooms + 1);
     }
   }
 
-  function roomminus() {
+  const roomminus = () =>  {
     if (rooms >= 1) {
       setrooms(rooms - 1);
     }
-    console.log(rooms);
     if (rooms === 1) {
       setadult(0);
       setchild(0);
@@ -39,7 +38,7 @@ function Roombooking() {
       setchild(0);
     }
   }
-  function adultplus() {
+ const adultplus = () => {
     if (rooms === 1) {
       if (adult + child <= 3) {
         setadult(adult + 1);
@@ -63,16 +62,16 @@ function Roombooking() {
     }
   }
 
-  function adultminus() {
+const adultminus = () => {
     if (adult >= 1) {
       setadult(adult - 1);
     }
-    if(adult === 0){
+    if(adult === 1){
       setchild(0)
     }
   }
 
-  function childplus() {
+const childplus = () => {
     if (adult >= 1) {
       if (rooms === 1) {
         if (adult + child <= 3) setchild(child + 1);
@@ -87,7 +86,7 @@ function Roombooking() {
       }
     }
   }
-  function childminus() {
+const childminus = () => {
     if (child >= 1) {
       setchild(child - 1);
     }
