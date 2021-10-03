@@ -13,6 +13,24 @@ function Roombooking() {
     if (rooms <= 4) {
       setrooms(rooms + 1);
     }
+    if (rooms === 0) {
+      setadult(4);
+      setchild(0);
+    } else if (rooms === 1) {
+      setadult(8);
+      setchild(0);
+    } else if (rooms === 2) {
+      setadult(12);
+      setchild(0);
+    }
+    else if (rooms === 3) {
+      setadult(16);
+      setchild(0);
+    }
+    else if (rooms === 4) {
+      setadult(20);
+      setchild(0);
+    }
   }
 
   const roomminus = () =>  {
@@ -67,6 +85,7 @@ const adultminus = () => {
       setadult(adult - 1);
     }
     if(adult === 1){
+      
       setchild(0)
     }
   }
